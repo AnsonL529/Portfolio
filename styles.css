@@ -7,7 +7,7 @@
 /*-------Header-------*/
 header {
     position: fixed;
-    margin-left: 80px;
+    margin-left: 50px;
     margin-top: 80px;
     width: 100%;
     z-index: 1000; /* Ensure the header is above other content */
@@ -145,9 +145,10 @@ section.video div.story {
 
 /*-------about-------*/
 /*-------Project-------*/
+
 #Project{
-    padding: 50px 0;
-}
+    margin-top: 200px;
+    padding: 50px 0;}
 .sub-title-p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 60px;
@@ -155,14 +156,67 @@ section.video div.story {
     font-weight: 600;
 }
 
-#Cream{
-    margin-top: 50px;
-    margin-left: 200px;
-    height: 400px;
-    width: 400px;
+.FocusPaw{
+    margin-bottom: 500px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Add spacing between items */
+    gap: 60px; /* Optional: Add spacing between elements */
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+.FocusPawimg{
+    margin-top: -100px;
+    border-radius: 30px;
+    height: 417px;
+    width: 605px;
+    float: left;
+}
+.FocusPaw-text{
+    flex: 1; /* Allow text to take up remaining space */
+}
+.FocusPaw-text h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 175px;
+}
+.award{
+    transform: translateY(-165px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+.description{
+    transform: translateY(-170px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ababab;
+}
+.skills{
+    transform: translateY(-165px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ababab;
+}
+.button{
+    transform: translateY(-150px);
+    display: inline-block;
+    padding: 8px 25px;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-
+.button:hover{
+    color: #ababab;
+    cursor: pointer;
+}
 /*-------Project-------*/
 /*-------Contact-------*/
 #Contact{
@@ -209,22 +263,6 @@ h4{
     font-size: 23px;
 }
 /*-------Contact-------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
