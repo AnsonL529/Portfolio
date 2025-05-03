@@ -1,0 +1,463 @@
+body {
+    animation: fadeInFromBlack 1s ease-in-out; /* Fallback fade-in animation */
+    position: relative; /* Ensure rectangles are positioned relative to the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+/* Flying rectangles animation */
+@keyframes flyingRectangles {
+    0% {
+        transform: translateY(100%); /* Start off-screen */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateY(-100%); /* Fly off the top of the screen */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Rectangle styles */
+.rectangle {
+    position: absolute;
+    width: 10%; /* Each rectangle takes up 10% of the viewport width */
+    height: 100vh; /* Full height of the viewport */
+    background-color: black; /* Rectangle color */
+    animation: flyingRectangles 1.5s ease-in-out forwards;
+}
+
+/* Position rectangles at different horizontal positions */
+.rectangle:nth-child(1) { left: 0; animation-delay: 0s; }
+.rectangle:nth-child(2) { left: 10%; animation-delay: 0.1s; }
+.rectangle:nth-child(3) { left: 20%; animation-delay: 0.2s; }
+.rectangle:nth-child(4) { left: 30%; animation-delay: 0.3s; }
+.rectangle:nth-child(5) { left: 40%; animation-delay: 0.4s; }
+.rectangle:nth-child(6) { left: 50%; animation-delay: 0.5s; }
+.rectangle:nth-child(7) { left: 60%; animation-delay: 0.6s; }
+.rectangle:nth-child(8) { left: 70%; animation-delay: 0.7s; }
+.rectangle:nth-child(9) { left: 80%; animation-delay: 0.8s; }
+.rectangle:nth-child(10) { left: 90%; animation-delay: 0.9s; }
+
+header {
+    position: fixed;
+    top: 71px; /* Align the header 71px from the top of the page */
+    width: 100%; /* Make the header span the full width */
+    z-index: 1000; /* Ensure the header is above other content */
+    display: flex; /* Use flexbox to center the navbar */
+    justify-content: center; /* Center the navbar horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0; /* Add some padding for spacing */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 35px; /* Add spacing between navigation links */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Make the navbar span the full width */
+    justify-content: flex-start; /* Align items to the left */
+    position: relative; /* Set relative positioning for the "Next" button */
+}
+
+.navbar li:first-child {
+    margin-left: 78px; /* Ensure the first button is flush with the left edge */
+}
+.navbar li.spacer {
+    margin: 160px; /* Add flexible space between "Back" and the other links */
+}
+.navbar li.next {
+    margin-right: 100px; /* Ensure the "Next" button is 100px from the right edge */
+}
+
+header {
+    position: fixed;
+    top: 71px; /* Align the header 71px from the top of the page */
+    width: 100%; /* Make the header span the full width */
+    z-index: 1000; /* Ensure the header is above other content */
+    display: flex; /* Use flexbox to center the navbar */
+    justify-content: flex-start; /* Align the navbar to the left */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0; /* Add some padding for spacing */
+}
+.navbar a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #355747; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+    width: 180px; /* Set width for active link */
+    height: 100%;
+    border-radius: 80px; /* Optional: Add rounded corners */
+}
+
+.nav-link {
+    color: #355747; /* Default font color */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease; /* Smooth transition for color and background */
+}
+
+.nav-link.active {
+    background-color: white; /* Default active background color */
+    color: #355747; /* Default active font color */
+    width: 180px; /* Set width for active link */
+    height: 100%;
+    border-radius: 80px; /* Optional: Add rounded corners */
+}
+
+.nav-link.active-problem {
+    background-color: #355747; /* Active background color for Problem section */
+    color: white; /* Active font color for Problem section */
+}
+.nav-link.active-solution {
+    background-color: #355747; /* Active background color for Problem section */
+    color: white; /* Active font color for Problem section */
+}
+.nav-link.active-design {
+    background-color: #355747; /* Active background color for Design section */
+    color: white; /* Active font color for Design section */
+}
+
+#Home .container {
+    padding-top: 650px;
+    height: 40vh; /* Full height of the viewport */
+    padding-left: 90px; /* Add 90px space from the left */
+}
+
+#Home .content h1 {
+    font-size: 200px; /* Adjust heading size if needed */
+    margin: 0 0 -15px 0; /* Add 10px space below the heading */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #355747;
+}
+
+#Home .content p {
+    font-size: 48px; /* Adjust paragraph size if needed */
+    margin: 0; /* Remove extra spacing above the paragraph */
+    margin-left: 10px; /* Keep the left margin */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #35574752;
+}
+
+
+
+#Problem {
+    height: 100vh; /* Full viewport height */
+    background-color: white; /* Background color for Problem */
+}
+
+#Problem .container {
+    display: flex; /* Align items horizontally */
+    flex-direction: column; /* Ensure vertical alignment */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Center items horizontally */
+    padding-left: 0; /* Add padding for alignment */
+}
+
+#Problem .upper {
+    display: flex; /* Align items horizontally */
+    flex-direction: row; /* Ensure horizontal alignment */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+    padding-left: 90px; /* Add padding for alignment */
+    gap: 190px; /* Add space between elements */
+}
+
+#Problem .lower {
+    display: flex; /* Align items horizontally */
+    flex-direction: row; /* Ensure horizontal alignment */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+    padding-left: 90px; /* Add padding for alignment */
+    gap: 20px; /* Add space between elements */
+}
+
+#Problem .Pro {
+    flex: 1; /* Allow the heading to take up space */
+}
+
+#Problem .Pro h2 {
+    padding-top: 150px; /* Add space from the top */
+    font-size: 128px; /* Adjust heading size */
+    margin: 0; /* Remove extra spacing */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #355747;
+}
+
+#Problem .problemdescription {
+    padding: 20px; /* Add padding inside the text box */
+}
+
+#Problem .problemdescription p {
+    padding: 20px; /* Add padding inside the text box */
+    margin-right: 90px; /* Add space to the right */
+    padding-top: 180px; /* Add space from the top */
+    font-size: 30px; /* Adjust text size */
+    font-family: sans-serif;
+    color: #355747;
+    flex: 2; /* Allow the text box to take up more space */
+}
+
+#Problem .Goal {
+    height: 50vh;
+    background-color: #A0F8CF;
+}
+
+#Problem .Goal h2 {
+    padding-left: 90px; /* Add space from the left */
+    padding-top: 120px; /* Add space from the top */
+    font-size: 128px; /* Adjust heading size */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #355747;
+}
+
+#Problem .line {
+    width: 5px; /* Adjust the width of the line */
+    height: 450px; /* Set the height of the line */
+    background-color: #355747; /* Set the color of the line */
+    margin: 0 0 0 10px; /* Move the line leftwards by reducing the left margin */
+    margin-top: -130px;
+}
+
+#Problem .text-boxes {
+    margin-top: -130px;
+
+    display: flex; /* Use flexbox for the text boxes */
+    flex-direction: column; /* Stack the text boxes vertically */
+}
+
+#Problem .text-box {
+    
+    padding: 20px; /* Add padding inside the text box */
+}
+
+#Problem .text-box p {
+    font-size: 32px; /* Adjust text size */
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark gray text color */
+}
+#Problem .percentage {
+    font-size: 96px;
+}
+
+#Problem .Pain img{
+    padding-left: 195px; /* Add space from the left */
+    padding-bottom: 150px; /* Add space from the top */
+    width: 660px; /* Adjust image width */
+}
+
+#Solution {
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Background color for Solution */
+}
+#Solution .container {
+    display: flex; /* Align items horizontally */
+    flex-direction: column; /* Ensure vertical alignment */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Center items horizontally */
+    padding-left: 0; /* Add padding for alignment */
+}
+#Solution .solution-content {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Space out the paragraph and image */
+    align-items: flex-start; /* Align items to the top */
+    padding-left: 90px; /* Add padding from the left */
+    padding-right: 90px; /* Add padding from the right */
+}
+#Solution .container h2 {
+    padding-left: 90px; /* Add space from the left */
+    padding-top: 150px; /* Add space from the top */
+    font-size: 80px; /* Adjust heading size */
+    margin: 0; /* Remove extra spacing */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #355747;
+}
+#Solution .container p {
+    padding-top: 60px;
+    font-size: 28px; /* Adjust paragraph size */
+    margin: 0; /* Remove extra spacing above the paragraph */
+    font-family: sans-serif;
+    color: #355747;
+}
+#Solution .solution-content img {
+    padding-top: -100px;
+    margin-left: 250px; /* Add space between the image and the text */
+    width: 560px; /* Set the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 12px; /* Add rounded corners to all sides */
+}
+
+#Design {
+    height: 250vh; /* Full viewport height */
+    background-color: #ffffff; /* Background color for Design */
+    position: relative; /* Ensure proper positioning */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+#Design .container {
+    display: flex; /* Align items horizontally */
+    flex-direction: column; /* Ensure vertical alignment */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Center items horizontally */
+    padding-left: 0; /* Remove any unintended padding */
+    margin: 0; /* Remove any unintended margin */
+}
+
+.journey {
+    display: flex; /* Use flexbox for vertical stacking */
+    flex-direction: column; /* Stack the .user elements vertically */
+    gap: 30px; /* Add spacing between the .user elements */
+    padding-left: 90px; /* Optional: Add padding from the left */
+    margin-top: 60px;
+    background-color: transparent; /* Ensure no background color is applied */
+}
+#Design .container h2 {
+    padding-left: 90px; /* Add space from the left */
+    padding-top: 150px; /* Add space from the top */
+    font-size: 80px; /* Adjust heading size */
+    margin: 0; /* Remove extra spacing */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #355747;
+}
+
+.user1, .user2, .user3 {
+    height: 280px;
+    width: 1435px;
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row; /* Align contents inside .user horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add spacing between the horizontal contents */
+    padding: 20px; /* Optional: Add padding inside each .user */
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-color: #f9f9f9; /* Optional: Add a light background color */
+}
+h3{
+    padding-left: 50px; /* Add space from the left */
+    font-size: 50px; /* Adjust heading size */
+    margin: 0; /* Remove extra spacing */
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #355747;
+}
+.user1 p{
+    padding-left: 200px; /* Add space from the left */
+    font-size: 20px; /* Adjust paragraph size */
+    margin: 0; /* Remove extra spacing above the paragraph */
+    font-family: sans-serif;
+    color: #355747;
+}
+.user2 p{
+    padding-left: 190px; /* Add space from the left */
+    font-size: 20px; /* Adjust paragraph size */
+    margin: 0; /* Remove extra spacing above the paragraph */
+    font-family: sans-serif;
+    color: #355747;
+}
+.user3 p{
+    padding-left: 50px; /* Add space from the left */
+    font-size: 20px; /* Adjust paragraph size */
+    margin: 0; /* Remove extra spacing above the paragraph */
+    font-family: sans-serif;
+    color: #355747;
+}
+.image-container {
+    padding-left: 100px;
+    position: relative; /* Position container for stacking images */
+    width: 220px; /* Set initial container width */
+    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio (square) */
+    overflow: hidden; /* Hide overflowing images */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.image-container .image {
+    position: absolute; /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make images fill the container */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the container */
+    opacity: 0; /* Hide all images initially */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+.image-container .image:nth-child(1) {
+    animation: fade1 3s infinite; /* Set duration to 15 seconds for the first image */
+}
+
+.image-container .image:nth-child(2) {
+    animation: fade2 3s infinite; /* Set duration to 15 seconds for the second image */
+}
+
+.image-container .image:nth-child(3) {
+    animation: fade3 3s infinite; /* Set duration to 15 seconds for the third image */
+}
+
+/* Keyframes for each image */
+@keyframes fade1 {
+    0%, 33% {
+        opacity: 1; /* Show the first image */
+    }
+    34%, 100% {
+        opacity: 0; /* Hide the first image */
+    }
+}
+
+@keyframes fade2 {
+    0%, 33% {
+        opacity: 0; /* Hide the second image */
+    }
+    34%, 66% {
+        opacity: 1; /* Show the second image */
+    }
+    67%, 100% {
+        opacity: 0; /* Hide the second image */
+    }
+}
+
+@keyframes fade3 {
+    0%, 66% {
+        opacity: 0; /* Hide the third image */
+    }
+    67%, 100% {
+        opacity: 1; /* Show the third image */
+    }
+}
+.user2 img{
+    padding-left: 90px; /* Add space from the left */
+    width: 300px; /* Adjust image width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 12px; /* Add rounded corners to all sides */
+}
+.user3 img{
+    padding-left: 60px; /* Add space from the left */
+    width: 300px; /* Adjust image width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 12px; /* Add rounded corners to all sides */
+}
+.image6{
+    margin-top: 200px;
+    margin-left: -90px;
+    width: 1200px; /* Make images fill the container */
+    height: 100%; /* Maintain aspect ratio */
+}
+#Market{
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Background color for Market */
+}

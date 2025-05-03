@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <title>// page title </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+</html>
+<body style="background-color: #A0F8CF;">
+    <!-- Flying rectangles -->
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+
+
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Back</a></li>
+                <li class="spacer"></li>
+                <li><a href="#Home" class="nav-link active">Home</a></li>
+                <li><a href="#Problem" class="nav-link">Problem</a></li>
+                <li><a href="#Solution" class="nav-link">Solution</a></li>
+                <li><a href="#Design" class="nav-link">Design</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Home">
+        <div class="container">
+            <div class="content">
+                <h1>FocusPaw</h1>
+                <p>AI, Neurodiversity, Innovation</p>
+            </div>
+        </div>
+    </section>
+    <section id="Problem">
+        <div class="container">
+            <div class="upper">
+                <div class="Pro">
+                    <h2>The <br> Problem</h2>
+                </div>
+                <div class="problemdescription">
+                    <p>
+                        Neurodivergent individuals often face challenges in <b>maintaining focus and managing distractions
+                        <br> in school.</b>
+                    </p>
+                </div>
+            </div>
+            <div class="lower">
+                <div class="line"></div>
+                <div class="text-boxes">
+                    <div class="text-box rate">
+                        <p>
+                            <b class="percentage">6.4%</b><br>
+                            HK students ADHD<br> prevalence
+                        </p>
+                    </div>
+                    <div class="text-box amount">
+                        <p>
+                            <b class="percentage">63 million</b><br>
+                            Estimated students with<br>ADHD worldwide
+                        </p>
+                    </div>
+                </div>
+                <div class="Pain">
+                    <img src="emap3.png"">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="Solution">
+        <div class="container">
+            <h2>A Glimpse of<br> the product</h2>
+            <div class="solution-content">
+                <p>
+                    FocusPaw aims to support students with ADHD<br> and enhance their learning experience through<br> personalized, interactive tools.
+                    <br>
+                    <br>
+
+                    <b>Recording and AI Transcript Generation:</b><br>
+                    Enables users, especially ADHD students, <br>to capture key information<br><br>
+
+                    <b>Gamified Self-Assessment:</b><br>
+                    Game-based learning promotes independent<br> learning and tracks progress effectively<br><br>
+
+                    <b>Recap Feature:</b><br>
+                    Allows ADHD students to catch up on missed<br> information to ensure they stay on track<br><br>
+                </p>
+                <img src="focus3d.png" alt="FocusPaw 3D Model" class="focus3d">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="Design">
+        <div class="container">
+            <h2>User Journey</h2>
+            <div class="journey">
+                <div class="user1">
+                    <h3>1. In class</h3>
+                    <p> <b>Recording and Transcription:</b> FocusPaw connects to<br> the teacher's microphone to record and transcribe the<br> lesson content.<br><br>
+                        <b>Break Feature:</b> When students find it hard to concentrate,<br> they can click the break button.<br><br>
+                        <b>Content Segmentation and Visuals:</b> The AI-powered pet<br> segments the teacher material, while AI-generated images<br> enhance understanding and engagement for ADHD students.</p>
+                        <div class="image-container">
+                            <img src="focuspaw1.png" alt="Image 1" class="image active">
+                            <img src="focuspaw2.png" alt="Image 2" class="image">
+                            <img src="focuspaw3.png" alt="Image 3" class="image">
+                        </div>
+                </div>
+                <div class="user2">
+                    <h3>2. Self-test</h3>
+                    <p><b>Gamified Self-Assessment:</b>
+                        Game-based learning<br> promotes independent learning and tracks progress<br> effectively
+                        </p>
+                    <img src="focuspaw4.png" alt="Image 4" class="image">
+                </div>
+                <div class="user3">
+                    <h3>3. Lesson Recap</h3>
+                    <p><b>Recap Feature:</b>
+                        Allows ADHD students to catch up on<br> missed information to ensure they stay on track</p>
+                    <img src="focuspaw3.png" alt="Image 5" class="image">
+                </div>
+                <img src="focuspaw6.png" alt="Image 6" class="image6">
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function updateActiveLink() {
+    let currentSection = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach((link) => {
+        link.classList.remove("active", "active-problem", "active-solution", "active-design");
+        if (link.getAttribute("href").includes(currentSection)) {
+            if (currentSection === "Problem") {
+                link.classList.add("active", "active-problem");
+            } else if (currentSection === "Solution") {
+                link.classList.add("active", "active-solution");
+            } else if (currentSection === "Design") {
+                link.classList.add("active", "active-design");
+            } else {
+                link.classList.add("active");
+            }
+        }
+    });
+}
+
+window.addEventListener("scroll", updateActiveLink);
+    </script>
+</body>

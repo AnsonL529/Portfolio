@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <title>// page title </title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body style="background-color: black;">
+        <header>
+            <nav>
+                <a href="#Home" class="active">Home</a>
+                <a href="#About">About me</a> 
+                <a href="#Project">Project</a> 
+                <a href="#Contact">Contact</a> 
+            </nav>
+        </header>
+
+
+        <section id="Home">
+            <section class="video">
+                <div class="holder"> 
+                    <video src="vinyl record .mp4"  muted playsinline></video>
+                </div>
+                <div class="story">
+                    <h1>"In a world of noise, find your rhythm."</h1>
+                </div>
+                <script src="video.js"></script>
+            </section>
+        </section>
+
+
+
+
+        <section id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="DSC06513.jpg" alt="Image">
+                    </div>
+                    <div class="about-col-2">
+                        <h2 class="sub-title">About Me</h2>
+                        <p>Hi, My name is Anson, As a interdisciplinary student in Engineering, Design and Business,<br> I am eager to apply my creativity and problem-solving skills to product design.  <br>I am excited to contribute fresh ideas and collaborate on innovative projects.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Basic Programming</span><br>Python, C++, HTML, CSS, JavaScript</li>
+                                <li><span>CAD, CAM</span><br>Blender, Rhino3D, SolidWorks, 3D printing, Laser-cutting </li>
+                                <li><span>Communication</span><br>Figma, Procreate, Canva, Powerpoint</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Summer Intern - Assistant Call Centre Officer</span><br>Electrical and Mechanical Services Department, JUN 2024 - SEP 2024</li>
+                                <li><span>President</span><br>The Engineering Students' Union, HKUST, 2024-2025</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Integrative Systems and Design, Extended Major in Digital Media and Creative Arts</span><br>Hong Kong University of Science and Technology, 2023-2027</li>
+                                <li><span>Stewards Pooi Kei College</span><br>2017-2023</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link")//This line adds the class "active-link" to the element that triggered the event (the current target).
+                    document.getElementById(tabname).classList.add("active-tab")//This line finds the element with the specified tabname ID and adds the class "active-tab" to it.
+                }
+
+                
+            </script>
+        </section>
+
+
+
+
+
+
+        <section id="Project">
+            <div class="container">
+                <h2 class="sub-title-p">My Project</h2>
+                    <div class="project-list">
+                        <div class="FocusPaw">
+                            <img src="focus3d.png" class="FocusPawimg">
+                            <div class="FocusPaw-text">
+                                <h2>FocusPaw</h2>
+                                <p class="award">OUTLIER 2025 Social Innovation Challenge (1st runner-up) </p>
+                                <p class="description">
+                                    FocusPaw is an innovative application designed specifically<br> 
+                                    for students with ADHD, aimed at enhancing focus and <br>
+                                    engagement during lessons. 
+                                </p>
+                                <p class="skills">
+                                    - Design thinking <br>
+                                    - User experience design <br>
+                                    - User interface design <br>
+                                    - Figma <br>
+                                </p>
+                                <a href="Focus.html" class="button" target="_blank">FocusPaw Breakdown </a>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="STEPS">
+                            <div class="STEPS-text">
+                                <h2>ST3PS</h2>
+                                <p class="award">2nd Year, Year Project (Work in Progress)</p>
+                                <p class="description">
+                                    Functional and accessible inclusive designs for<br> fitness options that cater to those suffering from<br> muscle reconditioning
+
+                                </p>
+                                <p class="skills">
+                                    - UI/UX Design<br>
+                                    - 3D modelling<br>
+                                    - IMU Data Manipulation<br>
+                                    - Figma, Blender, SolidWorks, Canva<br>
+                                </p>
+                                <a href="https://www.canva.com/design/DAGmY1rD4eM/0vwVlsYwenxQ6-7j9ua4uQ/view?utm_content=DAGmY1rD4eM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf4533d634e" class="button" target="_blank">ST3PS Progress Update</a>
+                            </div>
+                            <video class="STEPSimg" src="feet copy.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="GPSEEME">
+                            <img src="Guidian.jpg" class="GPSEEMEimg">
+                            <div class="GPSEEME-text">
+                                <h2>Guidian</h2>
+                                <p class="award">Innovative Navigation System (Work in Progress)</p>
+                                <p class="description">
+                                    Guidian is innovative smart eyewear for seniors, combining GPS navigation,<br> 220° obstacle detection, and fall alerts. With an emergency button and a <br>companion app for real-time updates, it empowers independence and<br> enhances safety effortlessly.                                </p>
+                                <p class="skills">
+                                    - UI/UX Design<br>
+                                    - 3D modelling<br>
+                                    - Blue Ocean strategy<br>
+                                    - Figma, Blender, Canva<br>
+                                </p>
+                                <a href="https://www.canva.com/design/DAGmZqHQj20/TBg5zoq5cxwU7Hs4lVW5QQ/view?utm_content=DAGmZqHQj20&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h79a1f5e876" class="button" target="_blank">Guidian Progress Update</a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="Contact">
+            <hr>
+            <h4>Let's make great PROJECT together</h4>
+            <p>ansonlaikahei@gmail.com</p>
+            <a href="https://drive.google.com/file/d/1SqddwJ8KnIlXQ2IYT_MTsM6wLqgayczD/view?usp=sharing" target="_blank" class="DOWNLOADCV">DOWNLOAD CV</a>
+        </section>
+
+        
+        <script src="main.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+Loves UI/UX, 3D and Product Design
+<h1>"In a world of noise, find your rhythm."</h1>
+<link rel="stylesheet" type="text/css" href="styles.css"> link html to
+<br> is next line
+<a href ="website link"> Name of the button</a>
+<img src="image.jpg" width="" height=""           add a image
+<nav> navigation bar
+  <ul> element list 
+   <li> list item
+    <a href> hyperlink
+-->
