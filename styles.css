@@ -68,7 +68,7 @@ section.video div.story {
 /*-------about-------*/
 #About {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 80px 0;
+    padding: 50px 0;
 }
 .row{
     display: flex;
@@ -106,7 +106,7 @@ section.video div.story {
 }
 
 .about-col-1:hover img {
-    animation: hoverImages 2s infinite; /* Trigger animation on hover */
+    animation: hoverImages 3s infinite; /* Trigger animation on hover */
 }
 
 /* Keyframes for image transitions */
@@ -123,21 +123,22 @@ section.video div.story {
 }
 .about-col-2{
     flex-basis: 60%;
-    color: #ababab;
+    color: #c0c0c0;
+    margin-top: -60px; /* Move content up, adjust value as needed */
 }
 .about-col-2 p{
     font-size: 20px;
     font-weight: 500;
 }
 .sub-title{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 60px;
     color: white;
     font-weight: 600;
 }
 .tab-titles{    
     display: flex;
-    margin: 20px 0 40px;
+    margin: 0 0 5px;
 }
 .tab-links{
     margin-right: 50px;
